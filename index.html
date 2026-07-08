@@ -32,11 +32,24 @@
   window.addEventListener("load", sendHeightToParent);
   window.addEventListener("resize", sendHeightToParent);
 
+  if (window.ResizeObserver) {
+    var observer = new ResizeObserver(function () {
+      sendHeightToParent();
+    });
+
+    observer.observe(document.body);
+  }
+
+  var images = document.querySelectorAll("img");
+  images.forEach(function (img) {
+    img.addEventListener("load", sendHeightToParent);
+    img.addEventListener("error", sendHeightToParent);
+  });
+
   setTimeout(sendHeightToParent, 300);
   setTimeout(sendHeightToParent, 1000);
   setTimeout(sendHeightToParent, 2000);
-
-  setInterval(sendHeightToParent, 1000);
+  setTimeout(sendHeightToParent, 4000);
 })();
 </script>
 </body>
