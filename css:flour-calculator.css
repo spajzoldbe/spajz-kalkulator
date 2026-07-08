@@ -1,0 +1,417 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbfaf6;
+  color: #2c3138;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.spajz-calculator-page {
+  width: 100%;
+  padding: 24px 0 56px;
+}
+
+.spajz-flour-calculator {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  background: #fbfaf6;
+  color: #2c3138;
+  box-sizing: border-box;
+}
+
+.spajz-flour-calculator *,
+.spajz-flour-calculator *:before,
+.spajz-flour-calculator *:after {
+  box-sizing: border-box;
+}
+
+.spajz-flour-calculator [hidden] {
+  display: none !important;
+}
+
+.spajz-flour-calculator .sfc-intro {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.spajz-flour-calculator .sfc-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2a4469;
+  margin: 0 0 10px;
+}
+
+.spajz-flour-calculator .sfc-lead {
+  max-width: 680px;
+  margin: 0 auto 22px;
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.spajz-flour-calculator .sfc-select-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-align: left;
+}
+
+.spajz-flour-calculator .sfc-select-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2a4469;
+}
+
+.spajz-flour-calculator .sfc-select {
+  min-width: 280px;
+  max-width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #2a4469;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #2c3138;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.spajz-flour-calculator .sfc-banner {
+  margin-bottom: 22px;
+}
+
+.spajz-flour-calculator .sfc-banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(42, 68, 105, 0.08);
+}
+
+.spajz-flour-calculator .sfc-banner-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2a4469 0%, #1e3350 70%);
+  box-shadow: 0 4px 18px rgba(42, 68, 105, 0.08);
+}
+
+.spajz-flour-calculator .sfc-banner-placeholder span {
+  color: #c9a75b;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 20px;
+  text-align: center;
+}
+
+.spajz-flour-calculator .sfc-recipe-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #2a4469;
+  margin: 0 0 6px;
+}
+
+.spajz-flour-calculator .sfc-recipe-subtitle {
+  margin: 0 0 16px;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+.spajz-flour-calculator .sfc-yield {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(42, 68, 105, 0.08);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  border-left: 4px solid #c9a75b;
+}
+
+.spajz-flour-calculator .sfc-yield-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.98rem;
+  padding: 2px 0;
+}
+
+.spajz-flour-calculator .sfc-yield-label {
+  color: #6b7280;
+}
+
+.spajz-flour-calculator .sfc-yield-value {
+  font-weight: 700;
+  color: #2c3138;
+}
+
+.spajz-flour-calculator .sfc-yield-current .sfc-yield-value {
+  color: #2a4469;
+  font-size: 1.05rem;
+}
+
+.spajz-flour-calculator .sfc-group-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2a4469;
+  margin: 24px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f5edda;
+}
+
+.spajz-flour-calculator .sfc-ingredient-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.spajz-flour-calculator .sfc-ingredient {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(42, 68, 105, 0.08);
+  padding: 16px 18px;
+  border: 1.5px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.spajz-flour-calculator .sfc-ingredient.sfc-active {
+  background: #f5edda;
+  border-color: #c9a75b;
+}
+
+.spajz-flour-calculator .sfc-ingredient-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.spajz-flour-calculator .sfc-ingredient-name {
+  font-weight: 700;
+  color: #2c3138;
+}
+
+.spajz-flour-calculator .sfc-optional {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  background: #eef0f3;
+  border-radius: 999px;
+  padding: 2px 8px;
+  vertical-align: middle;
+}
+
+.spajz-flour-calculator .sfc-adjusted-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2a4469;
+  background: #c9a75b;
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.spajz-flour-calculator .sfc-ingredient-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spajz-flour-calculator .sfc-amount-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spajz-flour-calculator .sfc-amount-input {
+  width: 110px;
+  padding: 9px 12px;
+  border: 1.5px solid #d5d9e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3138;
+  background: #ffffff;
+}
+
+.spajz-flour-calculator .sfc-unit {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.spajz-flour-calculator .sfc-amount-slider {
+  width: 100%;
+  height: 26px;
+  accent-color: #2a4469;
+  cursor: pointer;
+}
+
+.spajz-flour-calculator .sfc-ingredient-note {
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.spajz-flour-calculator .sfc-section-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #2a4469;
+  margin: 28px 0 14px;
+}
+
+.spajz-flour-calculator .sfc-notes-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #2c3138;
+  line-height: 1.6;
+}
+
+.spajz-flour-calculator .sfc-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.spajz-flour-calculator .sfc-product-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(42, 68, 105, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.spajz-flour-calculator .sfc-product-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background: #f4f4f2;
+  overflow: hidden;
+}
+
+.spajz-flour-calculator .sfc-product-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.spajz-flour-calculator .sfc-product-body {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.spajz-flour-calculator .sfc-product-name {
+  margin: 0;
+  font-weight: 700;
+  color: #2c3138;
+  line-height: 1.4;
+}
+
+.spajz-flour-calculator .sfc-product-amount,
+.spajz-flour-calculator .sfc-product-packs {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.spajz-flour-calculator .sfc-product-packs {
+  color: #2a4469;
+  font-weight: 700;
+}
+
+.spajz-flour-calculator .sfc-product-btn {
+  margin-top: auto;
+  display: inline-block;
+  text-align: center;
+  background: #2a4469;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 11px 16px;
+  border-radius: 9px;
+}
+
+.spajz-flour-calculator .sfc-product-btn:hover {
+  background: #1e3350;
+}
+
+.spajz-flour-calculator .sfc-cart-notice {
+  margin-top: 22px;
+  background: #f5edda;
+  border-radius: 14px;
+  padding: 14px 18px;
+  color: #2a4469;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.spajz-flour-calculator .sfc-cart-notice p {
+  margin: 0;
+}
+
+.spajz-flour-calculator .sfc-error {
+  background: #fdf1f0;
+  border: 1.5px solid #e2a49e;
+  border-radius: 14px;
+  color: #8c3730;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .spajz-flour-calculator {
+    padding: 18px 12px 40px;
+    overflow-x: hidden;
+  }
+
+  .spajz-flour-calculator .sfc-title {
+    font-size: 1.55rem;
+  }
+
+  .spajz-flour-calculator .sfc-ingredient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spajz-flour-calculator .sfc-select {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .spajz-flour-calculator .sfc-select-wrap {
+    width: 100%;
+  }
+
+  .spajz-flour-calculator .sfc-amount-slider {
+    height: 34px;
+  }
+
+  .spajz-flour-calculator .sfc-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .spajz-flour-calculator .sfc-product-body {
+    padding: 10px 12px 14px;
+  }
+
+  .spajz-flour-calculator .sfc-product-name {
+    font-size: 0.9rem;
+  }
+}
