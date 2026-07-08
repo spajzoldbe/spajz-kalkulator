@@ -1,0 +1,13 @@
+{
+  "version": "2026-07-08",
+  "recipes": [
+    {
+      "id": "hagyomanyos-feher-kovaszos-cipo",
+      "name": "Hagyományos, fehér kovászos cipó",
+      "category": "Kovászos kenyér",
+      "file": "./recipes/hagyomanyos-feher-kovaszos-cipo.json",
+      "banner": "./banners/hagyomanyoskovcipo.jpg",
+      "shortDescription": "Klasszikus fehér kovászos cipó kevés teljes kiőrlésű liszttel."
+    }
+  ]
+}
