@@ -1,0 +1,148 @@
+{
+  "id": "hagyomanyos-feher-kovaszos-cipo",
+  "name": "Hagyományos, fehér kovászos cipó",
+  "subtitle": "Klasszikus fehér kovászos kenyér kevés teljes kiőrlésű liszttel.",
+  "banner": "./banners/hagyomanyoskovcipo.jpg",
+  "baseYield": {
+    "amount": 2,
+    "unit": "db",
+    "label": "nagy cipó",
+    "display": "2 nagy cipó"
+  },
+  "ingredients": [
+    {
+      "id": "aktiv-kovasz",
+      "name": "Aktív kovász",
+      "type": "sourdough",
+      "baseAmount": 225,
+      "unit": "g",
+      "scalable": true,
+      "optional": false,
+      "slider": {
+        "min": 50,
+        "max": 600,
+        "step": 5
+      }
+    },
+    {
+      "id": "viz",
+      "name": "Víz",
+      "type": "water",
+      "baseAmount": 735,
+      "unit": "g",
+      "scalable": true,
+      "optional": false,
+      "slider": {
+        "min": 100,
+        "max": 2000,
+        "step": 5
+      }
+    },
+    {
+      "id": "vilagos-liszt",
+      "name": "Világos liszt",
+      "type": "flour",
+      "baseAmount": 800,
+      "unit": "g",
+      "scalable": true,
+      "optional": false,
+      "slider": {
+        "min": 100,
+        "max": 3000,
+        "step": 10
+      }
+    },
+    {
+      "id": "teljes-kiorlesu-liszt",
+      "name": "Teljes kiőrlésű liszt",
+      "type": "flour",
+      "baseAmount": 200,
+      "unit": "g",
+      "scalable": true,
+      "optional": false,
+      "slider": {
+        "min": 50,
+        "max": 1500,
+        "step": 10
+      }
+    },
+    {
+      "id": "malataliszt",
+      "name": "Malátaliszt",
+      "type": "malt",
+      "baseAmount": 5,
+      "unit": "g",
+      "scalable": true,
+      "optional": true,
+      "note": "Elhagyható",
+      "slider": {
+        "min": 0,
+        "max": 30,
+        "step": 1
+      }
+    },
+    {
+      "id": "so",
+      "name": "Finom szemcséjű só",
+      "type": "salt",
+      "baseAmount": 20,
+      "unit": "g",
+      "scalable": true,
+      "optional": false,
+      "slider": {
+        "min": 1,
+        "max": 80,
+        "step": 1
+      }
+    }
+  ],
+  "notes": [
+    "Aktív kovász helyett használható szárított kovászpor is.",
+    "A szárított kovászpor aránya nem azonos az aktív kovásszal! 500 g liszthez 50 g kovászpor javasolt.",
+    "Parajdi só is alkalmas a recepthez, de javasolt mozsárban finomra őrölni."
+  ],
+  "recommendedProducts": [
+    {
+      "id": "feher-kenyerliszt",
+      "name": "Világos kenyérliszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_BL80W700_A.jpg",
+      "url": "https://www.spajzoldbe.hu/w7001",
+      "neededIngredientId": "vilagos-liszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "teljes-kiorlesu-liszt",
+      "name": "Teljes kiőrlésű liszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_BL200_A.jpg",
+      "url": "https://www.spajzoldbe.hu/bl2001kg",
+      "neededIngredientId": "teljes-kiorlesu-liszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kovaszpor",
+      "name": "Kovászpor",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Kov/K_Szaritott_200g_A.jpg",
+      "url": "https://www.spajzoldbe.hu/szkov200",
+      "relatedOnly": true,
+      "customAmountText": "Aktív kovász helyett használható. 500 g liszthez kb. 50 g kovászpor javasolt.",
+      "packSize": 200,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "so",
+      "name": "Só",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/E_Parajdi_A.jpg",
+      "url": "https://www.spajzoldbe.hu/parajd1",
+      "neededIngredientId": "so",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    }
+  ],
+  "cartNotice": "A BeSpájzolom gombra kattintással egy darab termék kerül a kosárba. Kérjük, a kosár megtekintésekor ellenőrizze a szükséges mennyiséget, és ha többre van szüksége, növelje a termék darabszámát. Köszönjük."
+}
