@@ -16,6 +16,14 @@
       "file": "./recipes/hagyomanyos-magasabb-hidratacioju-kovaszos-cipo.json",
       "banner": "./banners/magashidrokovcipo.jpg",
       "shortDescription": "Lágyabb, levegősebb kovászos cipó magasabb víztartalommal, gyakorlottabb otthoni sütőknek."
+    },
+    {
+      "id": "teljes-kiorlesu-kovaszos-cipo",
+      "name": "Hagyományos, teljes kiőrlésű kovászos cipó",
+      "category": "Kovászos kenyér",
+      "file": "./recipes/hagyomanyos-teljes-kiorlesu-kovaszos-cipo.json",
+      "banner": "./banners/teljeskiorlesukovcipo.jpg",
+      "shortDescription": "Klasszikus teljes kiőrlésű kovászos cipó hűtős kelesztéssel."
     }
   ]
 }
