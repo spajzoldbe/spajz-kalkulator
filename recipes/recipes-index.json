@@ -8,6 +8,14 @@
       "file": "./recipes/hagyomanyos-feher-kovaszos-cipo.json",
       "banner": "./banners/hagyomanyoskovcipo.jpg",
       "shortDescription": "Klasszikus fehér kovászos cipó kevés teljes kiőrlésű liszttel."
+    },
+    {
+      "id": "hagyomanyos-magasabb-hidratacioju-kovaszos-cipo",
+      "name": "Hagyományos, magasabb hidratációjú kovászos cipó",
+      "category": "Kovászos kenyér",
+      "file": "./recipes/hagyomanyos-magasabb-hidratacioju-kovaszos-cipo.json",
+      "banner": "./banners/magasabbhidrataciokovcipo.jpg",
+      "shortDescription": "Lágyabb, levegősebb kovászos cipó magasabb víztartalommal, gyakorlottabb otthoni sütőknek."
     }
   ]
 }
