@@ -12,5 +12,32 @@
   </main>
 
   <script src="./js/flour-calculator.js"></script>
+
+  <script>
+(function () {
+  function sendHeightToParent() {
+    var height = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    );
+
+    window.parent.postMessage({
+      type: "spajzCalculatorHeight",
+      height: height
+    }, "*");
+  }
+
+  window.addEventListener("load", sendHeightToParent);
+  window.addEventListener("resize", sendHeightToParent);
+
+  setTimeout(sendHeightToParent, 300);
+  setTimeout(sendHeightToParent, 1000);
+  setTimeout(sendHeightToParent, 2000);
+
+  setInterval(sendHeightToParent, 1000);
+})();
+</script>
 </body>
 </html>
