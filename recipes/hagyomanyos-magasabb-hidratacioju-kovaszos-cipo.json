@@ -2,7 +2,7 @@
   "id": "hagyomanyos-magasabb-hidratacioju-kovaszos-cipo",
   "name": "Hagyományos, magasabb hidratációjú kovászos cipó",
   "subtitle": "Lágyabb, levegősebb kovászos cipó magasabb víztartalommal, gyakorlottabb otthoni sütőknek.",
-  "banner": "./banners/magasabbhidrataciokovcipo.jpg",
+  "banner": "./banners/magashidrokovcipo.jpg",
   "baseYield": {
     "amount": 2,
     "unit": "db",
