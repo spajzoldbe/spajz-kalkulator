@@ -26,7 +26,7 @@
     rootEl.innerHTML =
       '<div class="sfc-intro">' +
       '<h2 class="sfc-title">Liszt kalkulátor receptekhez</h2>' +
-      '<p class="sfc-lead">Válassz egy receptet, állítsd be a rendelkezésre álló alapanyag mennyiségét, és a kalkulátor arányosan újraszámolja az egész receptet.</p>' +
+      '<p class="sfc-lead">Válassz egy receptet, állítsd be a rendelkezésre álló alapanyag mennyiségét és a kalkulátor arányosan újraszámolja az egész receptet.</p>' +
       '<div class="sfc-select-wrap">' +
       '<label class="sfc-select-label" for="sfc-recipe-select">Recept kiválasztása</label>' +
       '<select id="sfc-recipe-select" class="sfc-select"></select>' +
