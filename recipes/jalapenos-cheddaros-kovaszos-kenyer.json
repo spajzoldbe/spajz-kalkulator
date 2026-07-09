@@ -285,7 +285,7 @@
       "packSize": 1000,
       "packUnit": "g",
       "buttonLabel": "Megnézem"
-    },
+    }
   ],
 
   "cartNotice": "A BeSpájzolom gombra kattintással egy darab termék kerül a kosárba. Kérjük, a kosár megtekintésekor ellenőrizze a szükséges mennyiséget és ha többre van szüksége, növelje a termék darabszámát. Köszönjük."
