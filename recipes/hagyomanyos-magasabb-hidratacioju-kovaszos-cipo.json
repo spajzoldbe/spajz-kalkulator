@@ -143,6 +143,26 @@
       "packSize": 1000,
       "packUnit": "g",
       "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "malataliszt",
+      "name": "Árpamaláta liszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_Arpamalata_C.jpg",
+      "url": "https://www.spajzoldbe.hu/arpamalata",
+      "neededIngredientId": "malataliszt",
+      "packSize": 500,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "rozsmalataliszt",
+      "name": "Rozsmaláta liszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_Rogrima_C.jpg",
+      "url": "https://www.spajzoldbe.hu/rogrima",
+      "neededIngredientId": "malataliszt",
+      "packSize": 500,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
     }
   ],
   "cartNotice": "A BeSpájzolom gombra kattintással egy darab termék kerül a kosárba. Kérjük, a kosár megtekintésekor ellenőrizze a szükséges mennyiséget és ha többre van szüksége, növelje a termék darabszámát. Köszönjük."
