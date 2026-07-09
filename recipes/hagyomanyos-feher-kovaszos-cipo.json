@@ -100,7 +100,8 @@
     "Aktív kovász helyett használható szárított kovászpor is.",
     "A szárított kovászpor aránya nem azonos az aktív kovásszal! 500 g liszthez 50 g kovászpor javasolt.",
     "Parajdi só is alkalmas a recepthez, de javasolt mozsárban finomra őrölni.",
-    "Hidratáció: 73%"
+    "Hidratáció: 73%",
+    "Ha most barátkozol a kenyérsütéssel, a kovászolással és szeretnéd még jobban megismerni a kovászos kenyér készítés folyamatait, akkor azt javasoljuk, hogy törekedj arra, hogy mindig ugyanazt a lisztet használd. Ez segíteni fog a tésztában bekövetkező változások felismerésében, a rutin kialakulásában. BL 80-as lisztjeink kiválóak erre a célra."
   ],
   "recommendedProducts": [
     {
@@ -108,6 +109,16 @@
       "name": "Világos kenyérliszt",
       "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_BL80W700_A.jpg",
       "url": "https://www.spajzoldbe.hu/w7001",
+      "neededIngredientId": "vilagos-liszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kenyerliszt",
+      "name": "Világos kenyérliszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_BL80_F.jpg",
+      "url": "https://www.spajzoldbe.hu/bl801kg",
       "neededIngredientId": "vilagos-liszt",
       "packSize": 1000,
       "packUnit": "g",
@@ -141,6 +152,26 @@
       "url": "https://www.spajzoldbe.hu/parajd1",
       "neededIngredientId": "so",
       "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "malataliszt",
+      "name": "Árpamaláta liszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_Arpamalata_C.jpg",
+      "url": "https://www.spajzoldbe.hu/arpamalata",
+      "neededIngredientId": "malataliszt",
+      "packSize": 500,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "rozsmalataliszt",
+      "name": "Rozsmaláta liszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_Rogrima_C.jpg",
+      "url": "https://www.spajzoldbe.hu/rogrima",
+      "neededIngredientId": "malataliszt",
+      "packSize": 500,
       "packUnit": "g",
       "buttonLabel": "Megnézem"
     }
