@@ -240,7 +240,7 @@
       "name": "Pizzaliszt",
       "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_Pizzaliszt_F.jpg",
       "url": "https://www.spajzoldbe.hu/pizzaliszt1kg",
-      "neededIngredientId": "pizzaliszt",
+      "neededIngredientId": "vilagos-liszt",
       "packSize": 1000,
       "packUnit": "g",
       "buttonLabel": "Megnézem"
@@ -281,7 +281,7 @@
       "name": "BL 80 kenyérliszt",
       "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_BL80_F.jpg",
       "url": "https://www.spajzoldbe.hu/bl801kg",
-      "neededIngredientId": "kenyerliszt",
+      "neededIngredientId": "vilagos-liszt",
       "packSize": 1000,
       "packUnit": "g",
       "buttonLabel": "Megnézem"
