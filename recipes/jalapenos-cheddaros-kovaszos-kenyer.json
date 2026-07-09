@@ -1,0 +1,292 @@
+{
+  "id": "jalapenos-cheddaros-kovaszos-kenyer",
+  "name": "Jalapeñós-cheddaros kovászos kenyér",
+  "subtitle": "Karakteres, enyhén csípős kovászos kenyér cheddarral és jalapeñóval.",
+  "banner": "./banners/cheddarjalakovcipo.jpg",
+
+  "baseYield": {
+    "amount": 1,
+    "unit": "db",
+    "label": "kenyér",
+    "display": "1 db jalapeñós-cheddaros kovászos kenyér"
+  },
+
+  "ingredientGroups": [
+    {
+      "id": "foteszta",
+      "title": "Főtészta",
+      "ingredients": [
+        {
+          "id": "viz",
+          "name": "Víz",
+          "type": "water",
+          "baseAmount": 180,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 50,
+            "max": 1000,
+            "step": 5
+          }
+        },
+        {
+          "id": "savanyitott-jalapeno-leve",
+          "name": "Savanyított jalapeño leve",
+          "type": "liquid",
+          "baseAmount": 50,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 300,
+            "step": 5
+          }
+        },
+        {
+          "id": "aktiv-kovasz",
+          "name": "Aktív kovász",
+          "type": "sourdough",
+          "baseAmount": 86,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 20,
+            "max": 400,
+            "step": 1
+          }
+        },
+        {
+          "id": "sorelesztophely",
+          "name": "Sörélesztőpehely",
+          "type": "flavouring",
+          "baseAmount": 3,
+          "unit": "g",
+          "scalable": true,
+          "optional": true,
+          "note": "Opcionális, sajtosabb ízért.",
+          "slider": {
+            "min": 0,
+            "max": 20,
+            "step": 1
+          }
+        },
+        {
+          "id": "vilagos-liszt",
+          "name": "Világos liszt vagy kenyérliszt",
+          "type": "flour",
+          "baseAmount": 375,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 100,
+            "max": 2000,
+            "step": 5
+          }
+        },
+        {
+          "id": "so",
+          "name": "Só",
+          "type": "salt",
+          "baseAmount": 7,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 1,
+            "max": 60,
+            "step": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "belevalok",
+      "title": "Belevalók",
+      "ingredients": [
+        {
+          "id": "reszelt-sarga-cheddar",
+          "name": "Reszelt sárga cheddar",
+          "type": "cheese",
+          "baseAmount": 46,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 500,
+            "step": 1
+          }
+        },
+        {
+          "id": "reszelt-feher-cheddar",
+          "name": "Reszelt fehér cheddar",
+          "type": "cheese",
+          "baseAmount": 46,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 500,
+            "step": 1
+          }
+        },
+        {
+          "id": "kockazott-friss-jalapeno",
+          "name": "Kockázott friss jalapeño",
+          "type": "vegetable",
+          "baseAmount": 40,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 500,
+            "step": 1
+          }
+        },
+        {
+          "id": "apritott-friss-serrano",
+          "name": "Apróra vágott friss serrano sonka",
+          "type": "meat",
+          "baseAmount": 5,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 200,
+            "step": 1
+          }
+        },
+        {
+          "id": "kockazott-kandirozott-jalapeno",
+          "name": "Kockázott kandírozott jalapeño",
+          "type": "vegetable",
+          "baseAmount": 30,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 500,
+            "step": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tetejere",
+      "title": "Kenyér tetejére sütés közben",
+      "ingredients": [
+        {
+          "id": "tetejere-reszelt-cheddar",
+          "name": "Reszelt fehér vagy sárga cheddar",
+          "type": "cheese",
+          "baseAmount": 20,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 200,
+            "step": 1
+          }
+        },
+        {
+          "id": "tetejere-friss-jalapeno-szelet",
+          "name": "Friss jalapeño szelet",
+          "type": "vegetable",
+          "baseAmount": 5,
+          "unit": "szelet",
+          "scalable": true,
+          "optional": false,
+          "rounding": "integer",
+          "slider": {
+            "min": 0,
+            "max": 50,
+            "step": 1
+          }
+        }
+      ]
+    }
+  ],
+
+  "notes": [
+    "A sörélesztőpehely opcionális, sajtosabb ízt ad.",
+    "A savanyított jalapeño leve a víz egy részét váltja ki, ezért a folyadékok együtt adják a tészta hidratálását.",
+    "Kezdeti lépések: A vizet, jalapeño-levet és az aktív kovászt összekevered, majd hozzáadod a lisztet, sót és opcionálisan a sörélesztőpelyhet (nem muszáj). 30 perc pihentetés után jön két hajtogatás, majd a harmadik hajtogatásnál kerül bele a cheddar, friss jalapeño, serrano és kandírozott jalapeño. Érdemes a belevalókat pár teáskanál liszttel átforgatni, mert így egyenletesebben oszlanak el a tésztában. Ezután még egy coil hajtás.",
+    "Kelesztés: Ha összeállt a tészta, akkor következik szobahőmérsékleten a bulk fermentálás (első kelesztés a formázásig), ami kb. 7,5 óra 24°C-os tésztahőmérsékleten, de ezt inkább állag alapján kell nézni, hogy buborékos, remegős, levegős legyen a tészta. Formázás után megy a hűtőbe 8–24 órára. Minimum 8 óra szükséges neki, utána akár süthető, de mi 12-16 órát javasolunk.",
+    "Sütés: 230°C-ra előmelegített, fedeles, hőtartó edényben. Fedővel 25 perc, majd fedő nélkül még 10–15 perc. A fedő levételekor kerül rá a plusz cheddar és az 5 jalapeño-karika. Belső hőmérséklet 96–99°C között a legideálisabb, ha ellenőrizni szeretnéd."
+  ],
+
+  "recommendedProducts": [
+    {
+      "id": "feher-kenyerliszt",
+      "name": "Világos kenyérliszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_BL80W700_A.jpg",
+      "url": "https://www.spajzoldbe.hu/w7001",
+      "neededIngredientId": "vilagos-liszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "pizzaliszt",
+      "name": "Pizzaliszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_Pizzaliszt_F.jpg",
+      "url": "https://www.spajzoldbe.hu/pizzaliszt1kg",
+      "neededIngredientId": "pizzaliszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kovaszpor",
+      "name": "Kovászpor",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Kov/K_Szaritott_200g_A.jpg",
+      "url": "https://www.spajzoldbe.hu/szkov200",
+      "relatedOnly": true,
+      "customAmountText": "Aktív kovász helyett használható. 500 g liszthez kb. 50 g kovászpor javasolt.",
+      "packSize": 200,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "so",
+      "name": "Só",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/E_Parajdi_A.jpg",
+      "url": "https://www.spajzoldbe.hu/parajd1",
+      "neededIngredientId": "so",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "sorelesztopehely",
+      "name": "Sörélesztőpehely",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Fuszerek/E_Bagoila_Soreleszto_A.jpg",
+      "url": "https://www.spajzoldbe.hu/glutenmentes_sorelesztopehely_100_g",
+      "neededIngredientId": "so",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kenyerliszt",
+      "name": "BL 80 kenyérliszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_BL80_F.jpg",
+      "url": "https://www.spajzoldbe.hu/bl801kg",
+      "neededIngredientId": "kenyerliszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+  ],
+
+  "cartNotice": "A BeSpájzolom gombra kattintással egy darab termék kerül a kosárba. Kérjük, a kosár megtekintésekor ellenőrizze a szükséges mennyiséget, és ha többre van szüksége, növelje a termék darabszámát. Köszönjük."
+}
