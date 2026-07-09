@@ -24,6 +24,14 @@
       "file": "./recipes/teljes-kiorlesu-kovaszos-cipo.json",
       "banner": "./banners/teljeskiorlesukovcipo.jpg",
       "shortDescription": "Klasszikus teljes kiőrlésű kovászos cipó hűtős kelesztéssel."
+    },
+    {
+      "id": "jalapenos-cheddaros-kovaszos-kenyer.json",
+      "name": "Cheddaros, jalapenos kovászos cipó",
+      "category": "Kovászos kenyér",
+      "file": "./recipes/jalapenos-cheddaros-kovaszos-kenyer.json",
+      "banner": "./banners/cheddarjalakovcipo.jpg",
+      "shortDescription": "Klasszikus kovászos kenyér cheddar sajttal és jalapeno-val"
     }
   ]
 }
