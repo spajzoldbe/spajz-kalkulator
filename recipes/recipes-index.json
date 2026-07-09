@@ -27,11 +27,11 @@
     },
     {
       "id": "jalapenos-cheddaros-kovaszos-kenyer",
-      "name": "Cheddaros, jalapenos kovászos cipó",
+      "name": "Cheddaros, jalapeñós kovászos cipó",
       "category": "Kovászos kenyér",
       "file": "./recipes/jalapenos-cheddaros-kovaszos-kenyer.json",
       "banner": "./banners/cheddarjalakovcipo.jpg",
-      "shortDescription": "Klasszikus kovászos kenyér cheddar sajttal és jalapeno-val"
+      "shortDescription": "Klasszikus kovászos kenyér cheddar sajttal és jalapeñóval"
     }
   ]
 }
