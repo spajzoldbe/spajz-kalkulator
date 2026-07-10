@@ -31,7 +31,15 @@
       "category": "Kovászos kenyér",
       "file": "./recipes/jalapenos-cheddaros-kovaszos-kenyer.json",
       "banner": "./banners/cheddarjalakovcipo.jpg",
-      "shortDescription": "Klasszikus kovászos kenyér cheddar sajttal és jalapeñóval"
+      "shortDescription": "Klasszikus kovászos kenyér cheddar sajttal és jalapeñóval."
+    },
+    {
+      "id": "osgabona-kovaszos-cipo",
+      "name": "Ősgabonás kovászos kenyér",
+      "category": "Kovászos kenyér",
+      "file": "./recipes/osgabona-kovaszos-cipo.json",
+      "banner": "./banners/osgabonakovcipo.jpg",
+      "shortDescription": "Karakteres ősgabonalisztből készült kovászos kenyér sütőformában sütve."
     }
   ]
 }
