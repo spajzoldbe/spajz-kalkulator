@@ -1,0 +1,172 @@
+{
+  "id": "osgabona-kovaszos-cipo",
+  "name": "Ősgabonás kovászos kenyér sütőformában",
+  "subtitle": "Karakteres ősgabonalisztből készült kovászos kenyér sütőformában sütve",
+  "banner": "./banners/osgabonakovcipo.jpg",
+
+  "baseYield": {
+    "amount": 4,
+    "unit": "db",
+    "label": "kenyér",
+    "display": "4 db kb. 620 g-os vekni"
+  },
+
+  "ingredientGroups": [
+    {
+      "id": "foteszta",
+      "title": "Főtészta",
+      "ingredients": [
+        {
+          "id": "viz",
+          "name": "Víz",
+          "type": "water",
+          "baseAmount": 875,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 50,
+            "max": 3000,
+            "step": 5
+          }
+        },
+        {
+          "id": "aktiv-kovasz",
+          "name": "Aktív kovász",
+          "type": "sourdough",
+          "baseAmount": 225,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 20,
+            "max": 800,
+            "step": 1
+          }
+        },
+        {
+          "id": "osgabona-liszt",
+          "name": "Teljes kiőrlésű ősgabonaliszt",
+          "type": "flour",
+          "baseAmount": 1000,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 100,
+            "max": 5000,
+            "step": 5
+          }
+        },
+        {
+          "id": "so",
+          "name": "Só",
+          "type": "salt",
+          "baseAmount": 20,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 1,
+            "max": 100,
+            "step": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "belevalok",
+      "title": "Belevalók",
+      "ingredients": [
+        {
+          "id": "olajos-magok",
+          "name": "Olajos magok, pl; tök-, szezám-, napraforgómag",
+          "type": "seeds",
+          "baseAmount": 200,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 0,
+            "max": 1000,
+            "step": 1
+           }
+        }
+      ]
+    }
+  ],
+
+  "notes": [
+    "Ajánlott a rozs, vagy teljes kiőrlésű kovász használata. Lisztek közül a kövön őrölt alakor, kamut, tönköly, vagy durum ideális választás.",
+    "Ajánlott 24-36 órás hűtős kelesztés.",
+    "Az ősgabonáknak gyakran sokkal összetettebb a gluténszerkezete, ezért a lisztjükből kihívást jelenthet cipót formázni. Rozskovásszal a hosszú kelesztés során a gluténháló is gyengül, ezért van szükség formára, ami megtartja.",
+    "A formát kenjük ki vajjal és szorjuk meg liszttel, hogy ne ragadjon bele a tészta.",
+    "A kovász, liszt és víz összedolgozása előtt a víz mennyiség 20%-át tegyük félre, mert az összedolgozás utáni pihentetés leteltével kerülnek bele a magok és a maradék víz. Elég egyszer hajtogatni, miután mindent hozzáadtunk. Ha a magvakat megpirítjuk, akkor nőhet a tészta vízfelvevő képessége, így akár 1000 g víz is kellhet."
+  ],
+
+  "recommendedProducts": [
+    {
+      "id": "alakor",
+      "name": "Alakor liszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/cache/w1024h1024wt1/Tamas/1KG/V_Alakor_C.jpg",
+      "url": "https://www.spajzoldbe.hu/alakor",
+      "neededIngredientId": "osgabona-liszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kamut",
+      "name": "Kamut liszt",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/cache/w1024h1024wt1/Tamas/1KG/V_Kamutliszt_C.jpg",
+      "url": "https://www.spajzoldbe.hu/kamut",
+      "neededIngredientId": "osgabona-liszt",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kovaszpor",
+      "name": "Kovászpor",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Kov/K_Szaritott_200g_A.jpg",
+      "url": "https://www.spajzoldbe.hu/szkov200",
+      "relatedOnly": true,
+      "customAmountText": "Aktív kovász helyett használható. 500 g liszthez kb. 50 g kovászpor javasolt.",
+      "packSize": 200,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "so",
+      "name": "Só",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/E_Parajdi_A.jpg",
+      "url": "https://www.spajzoldbe.hu/parajd1",
+      "neededIngredientId": "so",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "tonkoly-200",
+      "name": "Teljes kiőrlésű tönköly",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/cache/w1024h1024wt1/Tamas/1KG/V_TBL200_C.jpg",
+      "url": "https://www.spajzoldbe.hu/tonkoly200",
+      "neededIngredientId": "osgabona-liszt",
+      "packSize": 100,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "osgabona-csomag",
+      "name": "Ősgabona csomag",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/cache/w1024h1024wt1/Tamas/V_Alakor_Kamut_TBL200_C.jpg",
+      "url": "https://www.spajzoldbe.hu/osgabona",
+      "neededIngredientId": "osgabona-liszt",
+      "packSize": 3000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    }
+  ],
+
+  "cartNotice": "A BeSpájzolom gombra kattintással egy darab termék kerül a kosárba. Kérjük, a kosár megtekintésekor ellenőrizze a szükséges mennyiséget és ha többre van szüksége, növelje a termék darabszámát. Köszönjük."
+}
