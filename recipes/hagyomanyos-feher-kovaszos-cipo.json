@@ -98,7 +98,7 @@
   ],
   "notes": [
     "Aktív kovász helyett használható szárított kovászpor is.",
-    "A szárított kovászpor aránya nem azonos az aktív kovásszal! 500 g liszthez 50 g kovászpor javasolt.",
+    "A szárított kovászpor aránya nem azonos az aktív kovásszal! 500 g liszthez 5 g kovászpor javasolt.",
     "Parajdi só is alkalmas a recepthez, de javasolt mozsárban finomra őrölni.",
     "Hidratáció: 73%",
     "Ha most barátkozol a kenyérsütéssel, a kovászolással és szeretnéd még jobban megismerni a kovászos kenyér készítés folyamatait, akkor azt javasoljuk, hogy törekedj arra, hogy mindig ugyanazt a lisztet használd. Ez segíteni fog a tésztában bekövetkező változások felismerésében, a rutin kialakulásában. BL 80-as lisztjeink kiválóak erre a célra."
@@ -140,7 +140,7 @@
       "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Kov/K_Szaritott_200g_A.jpg",
       "url": "https://www.spajzoldbe.hu/szkov200",
       "relatedOnly": true,
-      "customAmountText": "Aktív kovász helyett használható. 500 g liszthez kb. 50 g kovászpor javasolt.",
+      "customAmountText": "Aktív kovász helyett használható. 1000 g liszthez kb. 10 g kovászpor javasolt.",
       "packSize": 200,
       "packUnit": "g",
       "buttonLabel": "Megnézem"
