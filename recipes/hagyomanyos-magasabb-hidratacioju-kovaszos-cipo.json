@@ -98,7 +98,7 @@
   ],
   "notes": [
     "Aktív kovász helyett használható szárított kovászpor is.",
-    "A szárított kovászpor aránya nem azonos az aktív kovásszal! 500 g liszthez 50 g kovászpor javasolt.",
+    "A szárított kovászpor aránya nem azonos az aktív kovásszal! 500 g liszthez 5 g kovászpor javasolt.",
     "Parajdi só is alkalmas a recepthez, de javasolt mozsárban finomra őrölni.",
     "Szobahőmérséklettől és a liszttől függően lehet, hogy a kelesztés hosszát 10-15 perccel le kell rövidíteni, mivel a nedvesebb tésztában nagyobb az enzimaktivitás, így gyorsabban kel. Ajánlott hűtőben keleszteni."
   ],
@@ -129,7 +129,7 @@
       "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Kov/K_Szaritott_200g_A.jpg",
       "url": "https://www.spajzoldbe.hu/szkov200",
       "relatedOnly": true,
-      "customAmountText": "Aktív kovász helyett használható. 500 g liszthez kb. 50 g kovászpor javasolt.",
+      "customAmountText": "Aktív kovász helyett használható. 1000 g liszthez kb. 10 g kovászpor javasolt.",
       "packSize": 200,
       "packUnit": "g",
       "buttonLabel": "Megnézem"
