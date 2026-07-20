@@ -45,6 +45,15 @@
       "file": "./recipes/osgabona-kovaszos-cipo.json",
       "banner": "./banners/osgabonakovcipo.jpg",
       "shortDescription": "Karakteres ősgabonalisztből készült kovászos kenyér sütőformában sütve."
+    },
+    {
+      "id": "joghurtos-tonkoly",
+      "name": "Joghurtos és tönkölyös kovászos cipó",
+      "categoryId": "kovaszos",
+      "category": "Kovászos receptek",
+      "file": "./recipes/joghurtos-tonkoly.json",
+      "banner": "./banners/joghurtostonkoly.jpg",
+      "shortDescription": "Karakteres kovászos kenyér joghurttal tönkölylisztből."
     }
   ]
 }
