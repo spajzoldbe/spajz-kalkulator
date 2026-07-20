@@ -4,7 +4,34 @@
   var RECIPE_INDEX_URL = "./recipes/recipes-index.json";
   var DEFAULT_BANNER_URL = "./banners/bannermain.jpg";
 
+  var CATEGORY_TABS = [
+    { id: "all", label: "Összes recept" },
+    { id: "kovaszos", label: "Kovászos receptek" },
+    { id: "elesztos", label: "Élesztős receptek" },
+    { id: "pizza-lepeny", label: "Pizzák, lepények" },
+    { id: "zsemle-kifli", label: "Zsemlék, kiflik" },
+    { id: "edes-teszta", label: "Édes tészták" }
+  ];
+
+  var CATEGORY_LABEL_TO_ID = {
+    "Kovászos receptek": "kovaszos",
+    "Kovászos kenyerek": "kovaszos",
+    "Kovászos kenyér": "kovaszos",
+    "Élesztős receptek": "elesztos",
+    "Élesztős kenyerek": "elesztos",
+    "Élesztős kenyér": "elesztos",
+    "Pizzák, lepények": "pizza-lepeny",
+    "Pizza / lepény": "pizza-lepeny",
+    "Pizzák": "pizza-lepeny",
+    "Zsemlék, kiflik": "zsemle-kifli",
+    "Zsemlék": "zsemle-kifli",
+    "Kiflik": "zsemle-kifli",
+    "Édes tészták": "edes-teszta",
+    "Édes receptek": "edes-teszta"
+  };
+
   var recipesMeta = [];
+  var activeCategoryId = "all";
   var currentRecipe = null;
   var currentScaleFactor = 1;
   var currentAmounts = {};
@@ -26,7 +53,8 @@
     rootEl.innerHTML =
       '<div class="sfc-intro">' +
       '<h2 class="sfc-title">Liszt kalkulátor receptekhez</h2>' +
-      '<p class="sfc-lead">Válassz egy receptet, állítsd be a rendelkezésre álló alapanyag mennyiségét és a kalkulátor arányosan újraszámolja az egész receptet. A lista folyamatosan bővül, ezért érdemes gyakran vissza látogatni az újdonságokért.</p>' +
+      '<p class="sfc-lead">Válassz egy receptet, állítsd be a rendelkezésre álló alapanyag mennyiségét és a kalkulátor arányosan újraszámolja az egész receptet. A lista folyamatosan bővül, ezért érdemes gyakran visszalátogatni az újdonságokért.</p>' +
+      '<div id="sfc-category-tabs" class="sfc-category-tabs" aria-label="Receptkategóriák"></div>' +
       '<div class="sfc-select-wrap">' +
       '<label class="sfc-select-label" for="sfc-recipe-select">Recept kiválasztása</label>' +
       '<select id="sfc-recipe-select" class="sfc-select"></select>' +
@@ -44,16 +72,7 @@
       '</div>';
 
     rootEl.querySelector("#sfc-recipe-select").addEventListener("change", function () {
-      var recipeId = this.value;
-      var selected = null;
-      var i;
-
-      for (i = 0; i < recipesMeta.length; i++) {
-        if (recipesMeta[i].id === recipeId) {
-          selected = recipesMeta[i];
-          break;
-        }
-      }
+      var selected = findRecipeMetaById(this.value);
 
       if (selected) {
         loadRecipe(selected);
@@ -64,11 +83,20 @@
   function loadRecipeIndex() {
     fetchJson(RECIPE_INDEX_URL)
       .then(function (indexData) {
+        var filtered;
+
         if (indexData && indexData.recipes && indexData.recipes.length) {
           recipesMeta = indexData.recipes;
+          renderCategoryTabs();
           populateRecipeSelect();
 
-          loadRecipe(recipesMeta[0]);
+          filtered = getFilteredRecipes();
+
+          if (filtered.length > 0) {
+            loadRecipe(filtered[0]);
+          } else {
+            showError("Ebben a kategóriában még nincs recept.");
+          }
         } else {
           showError("Nem található receptlista.");
         }
@@ -79,19 +107,168 @@
       });
   }
 
+  function findRecipeMetaById(recipeId) {
+    var i;
+
+    for (i = 0; i < recipesMeta.length; i++) {
+      if (recipesMeta[i].id === recipeId) {
+        return recipesMeta[i];
+      }
+    }
+
+    return null;
+  }
+
+  function getRecipeCategoryId(recipeMeta) {
+    if (recipeMeta.categoryId) {
+      return recipeMeta.categoryId;
+    }
+
+    if (recipeMeta.category && CATEGORY_LABEL_TO_ID[recipeMeta.category]) {
+      return CATEGORY_LABEL_TO_ID[recipeMeta.category];
+    }
+
+    return "egyeb";
+  }
+
+  function countRecipesInCategory(categoryId) {
+    var count = 0;
+    var i;
+
+    if (categoryId === "all") {
+      return recipesMeta.length;
+    }
+
+    for (i = 0; i < recipesMeta.length; i++) {
+      if (getRecipeCategoryId(recipesMeta[i]) === categoryId) {
+        count += 1;
+      }
+    }
+
+    return count;
+  }
+
+  function getFilteredRecipes() {
+    var filtered = [];
+    var i;
+
+    for (i = 0; i < recipesMeta.length; i++) {
+      if (activeCategoryId === "all" || getRecipeCategoryId(recipesMeta[i]) === activeCategoryId) {
+        filtered.push(recipesMeta[i]);
+      }
+    }
+
+    return filtered;
+  }
+
+  function renderCategoryTabs() {
+    var tabsEl = rootEl.querySelector("#sfc-category-tabs");
+    var html = "";
+    var i;
+    var tab;
+    var count;
+    var className;
+    var disabledAttr;
+
+    if (!tabsEl) {
+      return;
+    }
+
+    for (i = 0; i < CATEGORY_TABS.length; i++) {
+      tab = CATEGORY_TABS[i];
+      count = countRecipesInCategory(tab.id);
+      className = "sfc-category-tab";
+      disabledAttr = "";
+
+      if (tab.id === activeCategoryId) {
+        className += " sfc-category-tab-active";
+      }
+
+      if (count === 0) {
+        className += " sfc-category-tab-disabled";
+        disabledAttr = " disabled aria-disabled=\"true\"";
+      }
+
+      html += '<button type="button" class="' + className + '" data-category-id="' +
+        escapeHtml(tab.id) + '"' + disabledAttr + '>' +
+        escapeHtml(tab.label) +
+        '</button>';
+    }
+
+    tabsEl.innerHTML = html;
+
+    var buttons = tabsEl.querySelectorAll(".sfc-category-tab");
+
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].onclick = function () {
+        var selectedCategoryId = this.getAttribute("data-category-id");
+        var filtered;
+
+        if (this.disabled) {
+          return;
+        }
+
+        activeCategoryId = selectedCategoryId;
+
+        updateCategoryTabs();
+        populateRecipeSelect();
+
+        filtered = getFilteredRecipes();
+
+        if (filtered.length > 0) {
+          loadRecipe(filtered[0]);
+        } else {
+          showError("Ebben a kategóriában még nincs recept.");
+        }
+      };
+    }
+  }
+
+  function updateCategoryTabs() {
+    var tabsEl = rootEl.querySelector("#sfc-category-tabs");
+    var buttons;
+    var i;
+    var categoryId;
+    var className;
+
+    if (!tabsEl) {
+      return;
+    }
+
+    buttons = tabsEl.querySelectorAll(".sfc-category-tab");
+
+    for (i = 0; i < buttons.length; i++) {
+      categoryId = buttons[i].getAttribute("data-category-id");
+      className = "sfc-category-tab";
+
+      if (categoryId === activeCategoryId) {
+        className += " sfc-category-tab-active";
+      }
+
+      if (buttons[i].disabled) {
+        className += " sfc-category-tab-disabled";
+      }
+
+      buttons[i].className = className;
+    }
+  }
+
   function populateRecipeSelect() {
     var select = rootEl.querySelector("#sfc-recipe-select");
+    var filtered = getFilteredRecipes();
     var i;
     var option;
 
     select.innerHTML = "";
 
-    for (i = 0; i < recipesMeta.length; i++) {
+    for (i = 0; i < filtered.length; i++) {
       option = document.createElement("option");
-      option.value = recipesMeta[i].id;
-      option.textContent = recipesMeta[i].name;
+      option.value = filtered[i].id;
+      option.textContent = filtered[i].name;
       select.appendChild(option);
     }
+
+    select.disabled = filtered.length === 0;
   }
 
   function fetchJson(url) {
@@ -227,6 +404,7 @@
     refreshIngredientControls(ingredientId);
     renderYield(currentRecipe, currentScaleFactor);
     renderRecommendedProducts(currentRecipe, currentScaleFactor);
+    notifyHeightChanged();
   }
 
   function updateAllIngredientValues(scaleFactor) {
@@ -252,6 +430,7 @@
     renderNotes(recipe);
     renderRecommendedProducts(recipe, currentScaleFactor);
     renderCartNotice(recipe);
+    notifyHeightChanged();
   }
 
   function renderBanner(recipe) {
@@ -265,6 +444,11 @@
     bannerEl.querySelector("img").onerror = function () {
       this.onerror = null;
       this.src = DEFAULT_BANNER_URL;
+      notifyHeightChanged();
+    };
+
+    bannerEl.querySelector("img").onload = function () {
+      notifyHeightChanged();
     };
   }
 
@@ -508,13 +692,17 @@
     }
 
     return '<div class="sfc-product-card">' +
-      (product.image ? '<div class="sfc-product-img-wrap"><img class="sfc-product-img" src="' + escapeHtml(product.image) + '" alt="' + name + '" loading="lazy"></div>' : '<div class="sfc-product-img-wrap"></div>') +
-      '<div class="sfc-product-body">' +
-      '<p class="sfc-product-name">' + name + '</p>' +
-      amountHtml +
-      '<a class="sfc-product-btn" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + buttonLabel + '</a>' +
-      '</div>' +
-      '</div>';
+  (product.image
+    ? '<a class="sfc-product-img-link" href="' + escapeHtml(url) + '" target="_blank" rel="noopener" aria-label="' + name + ' megnyitása">' +
+      '<div class="sfc-product-img-wrap"><img class="sfc-product-img" src="' + escapeHtml(product.image) + '" alt="' + name + '" loading="lazy"></div>' +
+      '</a>'
+    : '<div class="sfc-product-img-wrap"></div>') +
+  '<div class="sfc-product-body">' +
+  '<p class="sfc-product-name">' + name + '</p>' +
+  amountHtml +
+  '<a class="sfc-product-btn" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + buttonLabel + '</a>' +
+  '</div>' +
+  '</div>';
   }
 
   function renderCartNotice(recipe) {
@@ -534,12 +722,39 @@
     errEl.textContent = message;
     errEl.hidden = false;
     rootEl.querySelector("#sfc-recipe").hidden = true;
+    notifyHeightChanged();
   }
 
   function hideError() {
     var errEl = rootEl.querySelector("#sfc-error");
     errEl.hidden = true;
     errEl.textContent = "";
+  }
+
+  function notifyHeightChanged() {
+    setTimeout(sendHeightToParent, 0);
+    setTimeout(sendHeightToParent, 200);
+    setTimeout(sendHeightToParent, 800);
+  }
+
+  function sendHeightToParent() {
+    var height;
+
+    if (window.parent === window) {
+      return;
+    }
+
+    height = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    );
+
+    window.parent.postMessage({
+      type: "spajzCalculatorHeight",
+      height: height
+    }, "*");
   }
 
   if (document.readyState === "loading") {
