@@ -1,0 +1,191 @@
+{
+  "id": "joghurtos-tonkoly",
+  "name": "Joghurtos és tönkölyös cipó",
+  "subtitle": "Karakteres kovászos kenyér joghurttal és tönkölybúza liszttel.",
+  "banner": "./banners/joghurtostonkoly.jpg",
+
+  "baseYield": {
+    "amount": 3,
+    "unit": "db",
+    "label": "kenyér",
+    "display": "3 db cipó"
+  },
+
+  "ingredientGroups": [
+    {
+      "id": "foteszta",
+      "title": "Főtészta",
+      "ingredients": [
+        {
+          "id": "viz",
+          "name": "Víz",
+          "type": "water",
+          "baseAmount": 800,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 50,
+            "max": 3000,
+            "step": 5
+          }
+        },
+        {
+          "id": "aktiv-kovasz",
+          "name": "Aktív kovász",
+          "type": "sourdough",
+          "baseAmount": 225,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 20,
+            "max": 1000,
+            "step": 1
+          }
+        },
+        {
+          "id": "joghurt",
+          "name": "Joghurt",
+          "type": "jogurt",
+          "baseAmount": 160,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 20,
+            "max": 2000,
+            "step": 1
+          }
+        },
+        {
+          "id": "tonkoly-200",
+          "name": "Teljes kiőrlésű tönkölyliszt",
+          "type": "flour",
+          "baseAmount": 500,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 100,
+            "max": 5000,
+            "step": 5
+          }
+        },
+        {
+          "id": "tonkoly-80",
+          "name": "Fehér tönkölyliszt",
+          "type": "flour",
+          "baseAmount": 500,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 100,
+            "max": 5000,
+            "step": 5
+          }
+        },
+        {
+          "id": "so",
+          "name": "Só",
+          "type": "salt",
+          "baseAmount": 22,
+          "unit": "g",
+          "scalable": true,
+          "optional": false,
+          "slider": {
+            "min": 1,
+            "max": 500,
+            "step": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "belevalok",
+      "title": "Belevalók",
+      "ingredients": [
+        {
+          "id": "olajos-magok",
+          "name": "Édeskömény- vagy köménymag",
+          "type": "seeds",
+          "baseAmount": 15,
+          "unit": "g",
+          "scalable": true,
+          "optional": true,
+          "slider": {
+            "min": 0,
+            "max": 1000,
+            "step": 1
+           }
+        }
+      ]
+    }
+  ],
+
+  "notes": [
+    "Ajánlott a tönkölyből készült kovász, de a hagyományos búzalisztes kovász is alkalmas. Fontos, hogy a joghurtnak is van víztartalma, ez is bele van számítva a tésztához szükséges folyadék mennyiségébe. A 160 g zsíros joghurtot 640 g vízben el kell keverni.",
+    "Ajánlott a szobahőmérsékleten történő kelesztés, kb. 16-18 órán keresztül. Az utolsó 30-60 percben a nyári meleg miatt be lehet tenni a hűtőbe, így keményebb, könyebben bevágható lesz.",
+    "Honnan tudhatjuk, hogy készen áll a tészta a sütésre? 4 féle lehetőség van. 1: Ha nyomásra azonnal visszaugrik, még alulkelt, több idő kell neki. 2: Ha szépen és egyenletesen reagál a nyomásra, készen áll a tészta a sütésre. 3: Ha nagyon felfújt és az ujjunk nyoma a tésztában marad, akkor a túlkelés határán van a tészta. 4: Ha nyomásra leereszt, összeesik, akkor túlkelt.",
+    "Ha a tészta túlkelt, tegyük át egy tepsire, nyomkodjuk be, locsoljuk meg finoman olivaolajjal, nyomkodjunk bele fokhagymát (5-8 db), tengeri sót és rozmaringot. Ha összeszedte magát a sütőben lévő 230 fokban és emelkedik, akkor egy finom focacciát kapunk.",
+    "A magok opcionálisak, de nagyon jól passzolnak ehhez a kenyérhez. A parajdi sót érdemes egy mozsárban finomra őrölni."
+  ],
+
+  "recommendedProducts": [
+    {
+      "id": "tonkoly-200",
+      "name": "Teljes kiőrlésű tönköly",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_TBL200_C.jpg",
+      "url": "https://www.spajzoldbe.hu/tonkoly200",
+      "neededIngredientId": "tonkoly-200",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "tonkoly-80",
+      "name": "Teljes kiőrlésű tönköly",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/V_TBL80_C.jpg",
+      "url": "https://www.spajzoldbe.hu/tonkoly80",
+      "neededIngredientId": "tonkoly-80",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kovaszpor200",
+      "name": "Kovászpor 200g",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Kov/K_Szaritott_200g_A.jpg",
+      "url": "https://www.spajzoldbe.hu/szkov200",
+      "relatedOnly": true,
+      "customAmountText": "Aktív kovász helyett használható. 1000 g liszthez kb. 10 g kovászpor javasolt.",
+      "packSize": 200,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "so",
+      "name": "Só",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/1KG/E_Parajdi_A.jpg",
+      "url": "https://www.spajzoldbe.hu/parajd1",
+      "neededIngredientId": "so",
+      "packSize": 1000,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    },
+    {
+      "id": "kovaszpor50",
+      "name": "Kovászpor 50g",
+      "image": "https://www.spajzoldbe.hu/custom/zoliproba/image/data/Tamas/Kov/K_Szaritott_50g_A.jpg",
+      "url": "https://www.spajzoldbe.hu/kovaszpor50",
+      "relatedOnly": true,
+      "customAmountText": "Aktív kovász helyett használható. 1000 g liszthez kb. 10 g kovászpor javasolt.",
+      "packSize": 50,
+      "packUnit": "g",
+      "buttonLabel": "Megnézem"
+    }
+  ],
+
+  "cartNotice": "A BeSpájzolom gombra kattintással egy darab termék kerül a kosárba. Kérjük, a kosár megtekintésekor ellenőrizze a szükséges mennyiséget és ha többre van szüksége, növelje a termék darabszámát. Köszönjük."
+}
