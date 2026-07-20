@@ -415,3 +415,107 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* =========================================================
+   SPÁJZ LISZT KALKULÁTOR - RECEPTKATEGÓRIA GOMBOK
+   ========================================================= */
+
+.spajz-flour-calculator .sfc-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 920px;
+  margin: 0 auto 22px;
+}
+
+.spajz-flour-calculator .sfc-category-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1.5px solid #c9a75b;
+  background: #ffffff;
+  color: #2a4469;
+  font-size: 0.92rem;
+  line-height: 1;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(42, 68, 105, 0.05);
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.spajz-flour-calculator .sfc-category-tab:hover {
+  background: #f5edda;
+  border-color: #c9a75b;
+  transform: translateY(-1px);
+}
+
+.spajz-flour-calculator .sfc-category-tab-active {
+  background: #2a4469;
+  border-color: #2a4469;
+  color: #ffffff;
+}
+
+.spajz-flour-calculator .sfc-category-tab-active:hover {
+  background: #2a4469;
+  border-color: #2a4469;
+  color: #ffffff;
+}
+
+.spajz-flour-calculator .sfc-category-tab-disabled {
+  opacity: 0.36;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .spajz-flour-calculator .sfc-category-tabs {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 0 2px 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .spajz-flour-calculator .sfc-category-tabs::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .spajz-flour-calculator .sfc-category-tabs::-webkit-scrollbar-thumb {
+    background: rgba(42, 68, 105, 0.22);
+    border-radius: 999px;
+  }
+
+  .spajz-flour-calculator .sfc-category-tab {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0 16px;
+    font-size: 0.86rem;
+  }
+}
+
+.spajz-flour-calculator .sfc-product-img-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.spajz-flour-calculator .sfc-product-img-link:hover .sfc-product-img {
+  transform: scale(1.035);
+}
+
+.spajz-flour-calculator .sfc-product-img {
+  transition: transform 0.22s ease;
+}
+
+.spajz-flour-calculator .sfc-product-img-link:focus {
+  outline: 3px solid rgba(201, 167, 91, 0.55);
+  outline-offset: 3px;
+}
